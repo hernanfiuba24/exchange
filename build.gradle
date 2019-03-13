@@ -23,6 +23,11 @@ repositories {
 }
 
 dependencies {
+	implementation 'commons-lang:commons-lang:2.2'
+	implementation 'org.projectlombok:lombok:1.18.4'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework:spring-aop:5.0.0.RELEASE'
+	implementation 'org.aspectj:aspectjrt:1.7.3'
+	implementation 'org.aspectj:aspectjweaver:1.7.3'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
