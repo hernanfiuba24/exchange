@@ -2,8 +2,6 @@ package com.exchange.model.sistemaSolar;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-import lombok.EqualsAndHashCode;
-
 public class CoordenadaCartesiana {
 	private Double x;
 	private Double y;

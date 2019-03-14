@@ -1,5 +1,6 @@
 package com.exchange.model.sistemaSolar;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,29 +23,34 @@ import com.exchange.logic.sistemaSolar.Recta;
 import com.exchange.logic.sistemaSolar.Triangulo;
 
 @Entity
-@Table (name = "SISTEMA_SOLAR")
-public class SistemaSolar{
+@Table (name = "SISTEMA_SOLAR", schema="sistemaSolar")
+public class SistemaSolar2 implements Serializable{
 	
-	private static final Logger logger = Logger.getLogger(SistemaSolar.class.getName());
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final Logger logger = Logger.getLogger(SistemaSolar2.class.getName());
 	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	
-	@Column(name="DAY")
+	@Column
 	private Long day;
 	
-	@Column(name="NAME")
+	@Column
 	private String name;
 	
 	@Transient
 	private Map<String, CuerpoCeleste> estrellas = new HashMap<>();
 	
-	public SistemaSolar() {
+	public SistemaSolar2() {
 		
 	}
 	
-	public SistemaSolar(Map<String, CuerpoCeleste> estrellas) {
+	public SistemaSolar2(Map<String, CuerpoCeleste> estrellas) {
 		this.day = 0l; 
 		this.estrellas = estrellas;
 	}
